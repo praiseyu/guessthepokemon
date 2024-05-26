@@ -1,0 +1,275 @@
+//Breakpoints:
+$mobile-breakpoint: 320px;
+$tablet-breakpoint: 768px;
+$desktop-breakpoint: 1280px;
+
+$yellow: #ffcb05;
+$black: #000000;
+$blue: #306bb3;
+
+//mixins
+@mixin tablet {
+  @media screen and (min-width: $tablet-breakpoint) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media screen and (min-width: $desktop-breakpoint) {
+    @content;
+  }
+}
+
+// @font-face {
+//   font-family: "Pocket Monk";
+//   src: url(../assets/fonts/pocket-monk.otf);
+//   font-weight: normal;
+//   font-style: normal;
+// }
+
+.lilita-one-regular {
+  font-family: "Lilita One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.libre-franklin-regular{
+  font-family: "Libre Franklin", sans-serif;
+  // font-weight: 500;
+  font-optical-sizing: auto;
+  font-weight: regular;
+  font-style: normal;
+}
+
+
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  font-family: "Lilita One";
+  min-height: 100vh;
+
+  background: linear-gradient(135deg, #316bb3, #ffcc06);
+  background: linear-gradient(155deg, #ffcc06, #316bb3);
+}
+
+main {
+  color: black;
+}
+
+p{
+  font-family: "Libre Franklin"; 
+  font-weight: 600;
+}
+.header {
+  text-align: center;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+
+  &__logo {
+    width: 269px;
+    padding-top: 1rem;
+
+    @include desktop {
+      width: 350px;
+      // width: 250px;
+      padding-top: 2rem;
+    }
+  }
+
+  &__text {
+    padding: 1rem;
+    width: 100%;
+    max-width: 320px;
+
+    @include desktop {
+      max-width: 900px;
+    }
+  }
+
+  &__title {
+    padding-bottom: 1rem;
+    font-size: 2rem;
+
+    @include desktop {
+      font-size: 2.5rem;
+    }
+  }
+
+  &__description {
+    @include desktop {
+      line-height: 1rem;
+      padding: 0.5rem;
+      font-size: 1.25rem;
+    }
+  }
+}
+
+.pokemon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 2rem 2rem;
+  gap: 2rem;
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    width: 16.625rem;
+    align-items: center;
+    gap: 1rem;
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 11px 12px 5px 0px rgba(0, 0, 0, 0.54);
+
+    @include desktop{
+      gap: 1.25rem;
+      padding: 2rem 3rem;
+    }
+  }
+  &__container {
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    border-radius: 10px;
+    border: 1px solid $black;
+
+    @include desktop{
+      width: 150px;
+      height: 150px;
+    }
+  }
+
+  &__image {
+    transform: scale(600%);
+
+    &--second {
+      transform: scale(350%);
+    }
+
+    &--third {
+      transform: scale(275%);
+    }
+
+    &--original {
+      transform: none;
+    }
+
+    object-fit: fill;
+  }
+
+  &__message {
+    text-align: center;
+    &--correct {
+      color: green;
+    }
+    &--incorrect {
+      color: red;
+    }
+  }
+
+}
+
+.guess-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: $black;
+    gap: 0.5rem;
+    // font-family: "Libre Franklin";
+    // letter-spacing: 1px;
+    // font-weight: 700;
+
+    &--hide {
+      display: none;
+    }
+  }
+
+  &__input{
+    outline: none;
+    height: 1.75rem;
+    border: 1px solid grey;
+    border-radius: 4px;
+    padding-left: 0.5rem;
+    font-family: "Libre Franklin";
+    &:focus{
+      border: 1px solid $black;
+    }
+    &::placeholder{
+      opacity: 0.5;
+    }
+
+    &--invalid{
+      border: 1px solid red;
+    }
+  }
+
+  &__submit-btn {
+    background-color: $blue;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    width: 100%;
+    border-radius: 4px;
+    font-family: "Lilita One";
+    letter-spacing: 1px;
+
+    &:hover{
+      cursor: pointer;
+    }
+  }
+}
+
+.guess-form__reset {
+  display: none;
+
+  &--newgame {
+    display: block;
+    color: white;
+    background-color: $yellow;
+    background-color: #788C77;
+    padding: 0.5rem 1rem;
+    width: 100%;
+    border: none;
+    border-radius: 4px;
+    font-family: "Lilita One";
+    letter-spacing: 1px;
+
+    &:hover{
+      cursor: pointer;
+    }
+  }
+}
+
+.footer {
+  padding: 1rem;
+  color: white;
+  text-align: center;
+}
+
+.pokemon__error {
+  border: solid #d22d2d;
+  outline: none;
+}
+
+.pokemon__name {
+  display: none;
+  &--show {
+    display: block;
+  }
+}

@@ -1,0 +1,227 @@
+.lilita-one-regular {
+  font-family: "Lilita One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.libre-franklin-regular {
+  font-family: "Libre Franklin", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: regular;
+  font-style: normal;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  font-family: "Lilita One";
+  min-height: 100vh;
+  background: linear-gradient(135deg, #316bb3, #ffcc06);
+  background: linear-gradient(155deg, #ffcc06, #316bb3);
+}
+
+main {
+  color: black;
+}
+
+p {
+  font-family: "Libre Franklin";
+  font-weight: 600;
+}
+
+.header {
+  text-align: center;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+.header__logo {
+  width: 269px;
+  padding-top: 1rem;
+}
+@media screen and (min-width: 1280px) {
+  .header__logo {
+    width: 350px;
+    padding-top: 2rem;
+  }
+}
+.header__text {
+  padding: 1rem;
+  width: 100%;
+  max-width: 320px;
+}
+@media screen and (min-width: 1280px) {
+  .header__text {
+    max-width: 900px;
+  }
+}
+.header__title {
+  padding-bottom: 1rem;
+  font-size: 2rem;
+}
+@media screen and (min-width: 1280px) {
+  .header__title {
+    font-size: 2.5rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .header__description {
+    line-height: 1rem;
+    padding: 0.5rem;
+    font-size: 1.25rem;
+  }
+}
+
+.pokemon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 2rem 2rem;
+  gap: 2rem;
+}
+.pokemon__card {
+  display: flex;
+  flex-direction: column;
+  width: 16.625rem;
+  align-items: center;
+  gap: 1rem;
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 11px 12px 5px 0px rgba(0, 0, 0, 0.54);
+}
+@media screen and (min-width: 1280px) {
+  .pokemon__card {
+    gap: 1.25rem;
+    padding: 2rem 3rem;
+  }
+}
+.pokemon__container {
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+  border-radius: 10px;
+  border: 1px solid #000000;
+}
+@media screen and (min-width: 1280px) {
+  .pokemon__container {
+    width: 150px;
+    height: 150px;
+  }
+}
+.pokemon__image {
+  transform: scale(600%);
+  -o-object-fit: fill;
+     object-fit: fill;
+}
+.pokemon__image--second {
+  transform: scale(350%);
+}
+.pokemon__image--third {
+  transform: scale(275%);
+}
+.pokemon__image--original {
+  transform: none;
+}
+.pokemon__message {
+  text-align: center;
+}
+.pokemon__message--correct {
+  color: green;
+}
+.pokemon__message--incorrect {
+  color: red;
+}
+
+.guess-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+}
+.guess-form__text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #000000;
+  gap: 0.5rem;
+}
+.guess-form__text--hide {
+  display: none;
+}
+.guess-form__input {
+  outline: none;
+  height: 1.75rem;
+  border: 1px solid grey;
+  border-radius: 4px;
+  padding-left: 0.5rem;
+  font-family: "Libre Franklin";
+}
+.guess-form__input:focus {
+  border: 1px solid #000000;
+}
+.guess-form__input::-moz-placeholder {
+  opacity: 0.5;
+}
+.guess-form__input::placeholder {
+  opacity: 0.5;
+}
+.guess-form__input--invalid {
+  border: 1px solid red;
+}
+.guess-form__submit-btn {
+  background-color: #306bb3;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  width: 100%;
+  border-radius: 4px;
+  font-family: "Lilita One";
+  letter-spacing: 1px;
+}
+.guess-form__submit-btn:hover {
+  cursor: pointer;
+}
+
+.guess-form__reset {
+  display: none;
+}
+.guess-form__reset--newgame {
+  display: block;
+  color: white;
+  background-color: #ffcb05;
+  background-color: #788C77;
+  padding: 0.5rem 1rem;
+  width: 100%;
+  border: none;
+  border-radius: 4px;
+  font-family: "Lilita One";
+  letter-spacing: 1px;
+}
+.guess-form__reset--newgame:hover {
+  cursor: pointer;
+}
+
+.footer {
+  padding: 1rem;
+  color: white;
+  text-align: center;
+}
+
+.pokemon__error {
+  border: solid #d22d2d;
+  outline: none;
+}
+
+.pokemon__name {
+  display: none;
+}
+.pokemon__name--show {
+  display: block;
+}/*# sourceMappingURL=main.css.map */

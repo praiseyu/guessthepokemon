@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.7/axios.min.js"
+    integrity="sha512-NQfB/bDaB8kaSXF8E77JjhHG5PM6XVRxvHzkZiwl3ddWCEPBa23T76MuWSwAJdMGJnmQqM0VeY9kFszsrBEFrQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <!-- <script type="module" src="/js/index.js"></script> -->
+  <script type="module" src="/js/main.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&family=Lilita+One&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="styles/main.css" />
+  <title>Guess the Pokemon</title>
+</head>
+
+<body>
+  <!-- class = pokemon__container for pokemon img  -->
+  <header class="header">
+    <img src="/assets/images/pokemon-logo.svg" alt="Pokemon logo" class="header__logo" />
+    <div class="header__text">
+      <h1 class="header__title">GUESS THE POKEMON</h1>
+      <p class="header__description">
+        You have three guesses to correctly identify this pokemon's name!
+        <!-- YOU HAVE THREE GUESSES TO CORRECTLY IDENTIFY THIS POKEMON'S NAME! -->
+      </p>
+      <p class="header__description">
+        With each guess, the image will zoom out, giving you a hint of which
+        pokemon it is.
+      </p>
+      <p class="header__description">Good luck!</p>
+    </div>
+  </header>
+  <main>
+    <section class="pokemon">
+      <div class="pokemon__card">
+        <h3 class="pokemon__name"></h3>
+        <div class="pokemon__container"></div>
+        <form class="guess-form" autocomplete="off">
+          <!-- <div class="guess-form__text"> -->
+          <label for="guess" class="guess-form__text">
+            WHO IS IT?
+            <input type="text" name="guess" id="guess" class="guess-form__input" placeholder="Enter a name..."/>
+          </label>
+
+          <!-- </div> -->
+
+          <button type="button" class="guess-form__reset">New Game!</button>
+          <button type="submit" class="guess-form__submit-btn">GUESS!</button>
+        </form>
+        <p class="pokemon__message"></p>
+      </div>
+
+      
+    </section>
+  </main>
+  <footer class="footer">
+    <p class="footer__text">Made by Ehi & Praise for Brainstation 2024.</p>
+  </footer>
+</body>
+
+</html>
