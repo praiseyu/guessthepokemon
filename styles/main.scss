@@ -6,6 +6,9 @@ $desktop-breakpoint: 1280px;
 $yellow: #ffcb05;
 $black: #000000;
 $blue: #306bb3;
+$white: #ffffff;
+$green: #30ad3f;
+$red: #bc0000;
 
 //mixins
 @mixin tablet {
@@ -20,29 +23,18 @@ $blue: #306bb3;
   }
 }
 
-// @font-face {
-//   font-family: "Pocket Monk";
-//   src: url(../assets/fonts/pocket-monk.otf);
-//   font-weight: normal;
-//   font-style: normal;
-// }
-
 .lilita-one-regular {
   font-family: "Lilita One", sans-serif;
   font-weight: 400;
   font-style: normal;
 }
 
-.libre-franklin-regular{
+.libre-franklin-regular {
   font-family: "Libre Franklin", sans-serif;
-  // font-weight: 500;
   font-optical-sizing: auto;
   font-weight: regular;
   font-style: normal;
 }
-
-
-
 
 * {
   box-sizing: border-box;
@@ -52,34 +44,31 @@ $blue: #306bb3;
 body {
   font-family: "Lilita One";
   min-height: 100vh;
-
   background: linear-gradient(135deg, #316bb3, #ffcc06);
   background: linear-gradient(155deg, #ffcc06, #316bb3);
 }
 
 main {
-  color: black;
+  color: $black;
 }
 
-p{
-  font-family: "Libre Franklin"; 
+p {
+  font-family: "Libre Franklin";
   font-weight: 600;
 }
 .header {
   text-align: center;
-  color: black;
+  color: $black;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 2rem;
 
   &__logo {
-    width: 269px;
+    width: 16.8125rem;
     padding-top: 1rem;
-
     @include desktop {
-      width: 350px;
-      // width: 250px;
+      width: 21.875rem;
       padding-top: 2rem;
     }
   }
@@ -87,10 +76,10 @@ p{
   &__text {
     padding: 1rem;
     width: 100%;
-    max-width: 320px;
+    max-width: 20rem;
 
     @include desktop {
-      max-width: 900px;
+      max-width: 56.25rem;
     }
   }
 
@@ -125,26 +114,26 @@ p{
     width: 16.625rem;
     align-items: center;
     gap: 1rem;
-    background-color: white;
+    background-color: $white;
     padding: 1.5rem;
     border-radius: 10px;
     box-shadow: 11px 12px 5px 0px rgba(0, 0, 0, 0.54);
 
-    @include desktop{
+    @include desktop {
       gap: 1.25rem;
       padding: 2rem 3rem;
     }
   }
   &__container {
-    width: 100px;
-    height: 100px;
+    width: 6.25rem;
+    height: 6.25rem;
     overflow: hidden;
     border-radius: 10px;
     border: 1px solid $black;
 
-    @include desktop{
-      width: 150px;
-      height: 150px;
+    @include desktop {
+      width: 9.375rem;
+      height: 9.375rem;
     }
   }
 
@@ -169,13 +158,12 @@ p{
   &__message {
     text-align: center;
     &--correct {
-      color: green;
+      color: $green;
     }
     &--incorrect {
-      color: red;
+      color: $red;
     }
   }
-
 }
 
 .guess-form {
@@ -191,31 +179,28 @@ p{
     align-items: center;
     color: $black;
     gap: 0.5rem;
-    // font-family: "Libre Franklin";
-    // letter-spacing: 1px;
-    // font-weight: 700;
 
     &--hide {
       display: none;
     }
   }
 
-  &__input{
+  &__input {
     outline: none;
     height: 1.75rem;
     border: 1px solid grey;
     border-radius: 4px;
     padding-left: 0.5rem;
     font-family: "Libre Franklin";
-    &:focus{
+    &:focus {
       border: 1px solid $black;
     }
-    &::placeholder{
+    &::placeholder {
       opacity: 0.5;
     }
 
-    &--invalid{
-      border: 1px solid red;
+    &--invalid {
+      border: 1px solid $red;
     }
   }
 
@@ -229,7 +214,7 @@ p{
     font-family: "Lilita One";
     letter-spacing: 1px;
 
-    &:hover{
+    &:hover {
       cursor: pointer;
     }
   }
@@ -242,7 +227,7 @@ p{
     display: block;
     color: white;
     background-color: $yellow;
-    background-color: #788C77;
+    background-color: #788c77;
     padding: 0.5rem 1rem;
     width: 100%;
     border: none;
@@ -250,7 +235,7 @@ p{
     font-family: "Lilita One";
     letter-spacing: 1px;
 
-    &:hover{
+    &:hover {
       cursor: pointer;
     }
   }
@@ -258,12 +243,12 @@ p{
 
 .footer {
   padding: 1rem;
-  color: white;
+  color: $white;
   text-align: center;
 }
 
 .pokemon__error {
-  border: solid #d22d2d;
+  border: solid $red;
   outline: none;
 }
 
